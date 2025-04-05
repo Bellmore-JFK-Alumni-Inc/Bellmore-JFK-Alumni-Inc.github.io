@@ -15,21 +15,8 @@ export const headerData = {
       href: getPermalink('#'),
     },
     {
-      text: 'News & Scholarships',
-      links: [
-        {
-          text: 'Alumni in the News',
-          href: getPermalink('#'),
-        },
-        {
-          text: 'Alumni Projects',
-          href: getPermalink('#'),
-        },
-        {
-          text: 'Scholarships',
-          href: getPermalink('#'),
-        },
-      ],
+      text: 'Scholarships',
+      href: getPermalink('/scholarships'),
     },
     {
       text: 'Join Us',
@@ -65,9 +52,7 @@ export const footerData = {
       title: 'Events & Activities',
       links: [
         { text: 'Events', href: '#' },
-        { text: 'Alumni in the News', href: '#' },
-        { text: 'Alumni Projects', href: '#' },
-        { text: 'Scholarships', href: '#' },
+        { text: 'Scholarships', href: '/scholarships' },
       ],
     },
     {

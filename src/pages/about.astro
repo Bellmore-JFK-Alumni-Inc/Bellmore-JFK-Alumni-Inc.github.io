@@ -1,30 +1,127 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'About Us',
+  title: 'About JFK Alumni',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- HeroText Widget -->
+  <HeroText tagline="About" title="Learn More About Us!" />
 
-  <Hero
-    tagline="About Us"
+  <!-- Mission Statement Section -->
+  <Features
+    title="Mission Statement"
+    subtitle="The principles that guide our association:"
+    columns={2}
+    items={[
+      {
+        title: 'Foster Loyalty & Camaraderie',
+        description:
+          'Foster a spirit of loyalty and camaraderie among graduates and former students of Bellmore JFK High School.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Promote & Support',
+        description: 'Promote and support the programs and activities of Bellmore JFK High School and its alumni.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Encourage Relationships',
+        description: 'Encourage Bellmore JFK alumni to maintain continuing relationships with the school.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Utilize Alumni Services',
+        description:
+          'Better utilize the potential for all alumni services to the school through constructive endeavors.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Develop Programs',
+        description:
+          'Develop social events, educational, and scholarship programs to meet the needs of both the students and the alumni of JFK.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- History Section -->
+  <Content
+    title="History of Our School"
+    subtitle="The Central High School District and the Birth of JFK High School"
+    content="Central High School District 3 began in 1934, led by Wellington C. Mepham, when residents of Merrick and Bellmore voted to create a central high school district. Mepham High School opened in 1937 to serve the growing community. Following WWII's population boom, Sanford H. Calhoun High School was built, with its first class graduating in 1960. As neighborhoods continued to expand south of Merrick Road, John F. Kennedy High School was established, opening its doors on September 7, 1966. The new three-story brick building was constructed on a 28-acre site adjacent to St. Mark's Avenue Elementary School, with Anthony W. Yeneralo as its first principal. JFK High School was designed with a 2000-student capacity and currently features 44 regular classrooms, specialized departments, athletic facilities, and modern educational spaces to serve the growing Bellmore community."
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/about-history.png',
+      alt: 'JFK Alumni History',
     }}
-  >
-    <Fragment slot="title">
-      Placeholder for <span class="text-accent dark:text-white highlight">Bellmore JFK Alumni</span> About Us page
-    </Fragment>
+    callToAction={{
+      variant: 'primary',
+      text: 'Read About Our 50 Year History, Written by JFK Students',
+      href: 'http://uncoveringthepast.weebly.com/uploads/2/4/4/9/24492964/history_of_jfkhs.pdf',
+      target: '_blank',
+      icon: 'tabler:history',
+    }}
+  />
 
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
+  <!-- Team/Leadership Section -->
+  <Features
+    title="Our Board of Directors"
+    subtitle="Meet the dedicated alumni who volunteer their time to lead our association."
+    items={[
+      {
+        title: 'John Smith',
+        description: 'President',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Jane Doe',
+        description: 'Vice President',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Robert Johnson',
+        description: 'Treasurer',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Lisa Brown',
+        description: 'Secretary',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Michael Davis',
+        description: 'Events Coordinator',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Sarah Wilson',
+        description: 'Communications Director',
+        icon: 'tabler:user',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    title="Join Our Alumni Community"
+    subtitle="Connect with fellow graduates, attend events, and stay updated on JFK news."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Become a Member',
+        href: '/join',
+        icon: 'tabler:user-plus',
+      },
+      {
+        text: 'Contact Us',
+        href: '/contact',
+      },
+    ]}
+  />
 </Layout>

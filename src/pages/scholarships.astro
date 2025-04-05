@@ -1,0 +1,55 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Scholarships',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget -->
+  <HeroText tagline="Scholarships" title="Learn About Our Scholarships!" />
+
+  <!-- Scholarship Details as FAQs -->
+  <FAQs
+    title="Memorial Scholarships"
+    subtitle="Learn about our available scholarships established to honor JFK alumni"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Dr. Joel Morganstern Memorial Scholarship Fund',
+        description: `
+                    <p style="margin-bottom: 1rem;">It is with great pleasure and much pride that the family of Dr. Joel Morganstern has formed the Memorial Scholarship Fund.</p>
+                    <p style="margin-bottom: 1rem;">Joel graduated JFK Bellmore in the year 1968. Education was always important to Joel. He always believed that "The cream would always rise to the top." It is with his belief in mind, that we have started this scholarship to help other JFK students with their "rise to the top."</p>
+                    <p style="margin-bottom: 1rem;">Joel went on to become a Doctor of Veterinary Medicine, married, and had two children.</p>
+                    <p style="margin-bottom: 1rem;">The memories of Joel, as you can imagine, are all very special and personal. We would like to say that Joel was a gentle soul, a gentle man and a gentleman, a caring and giving friend, a great brother, brother-in-law, son, son-in-law, uncle, father, and husband.</p>
+                    <p style="margin-bottom: 1rem;">We all miss him, and we hope that the recipient of this scholarship will make us proud in his memory.</p>
+                    <p style="margin-bottom: 1rem;">~ Dr. Gary Morganstern, Beth & Jessica, Carol "Gallo" Morganstern Grodin, Jason Morganstern, Seth Morganstern, Dr. Steven Morganstern</p>
+                `,
+      },
+      {
+        title: 'The Carol Kestenbaum Foundation',
+        description: `
+                    <p style="margin-bottom: 1rem;">Carol was a 2005 graduate of JFK High School in Bellmore. The Foundation was created in Memory of Carol Fay Kestenbaum. We strive to carry on her dreams. Carol was an education major and her desire to work with children inspires us to support programs that improve the lives of our youth, one child at a time. Through the Foundation's supporters, we are gratefully able to continue Carol's legacy.</p>
+                    <p style="margin-bottom: 1rem;">The Carol Kestenbaum Foundation is dedicated to helping young people build strong self esteem, empowering them to make positive choices. Through Carol's Circle, a year round program run by Project Morry, girls learn how to navigate the complicated messages that society sends them. Building confidence and strong sense of self is the focus of this program.</p>
+                    <p style="margin-bottom: 1rem;">CKF also supports the Long Island Crisis Center's Community Education Program. Trained counselors visit High Schools to speak about suicide prevention, and we are saving lives. This year the program was expanded to include a workshop on Cyber Bullying Prevention.</p>
+                `,
+      },
+      {
+        title: 'The Jimmy Director Memorial Scholarship Fund',
+        description: `
+                    <p style="margin-bottom: 1rem;">I want to thank Ronnie Steiger and the Bellmore JFK Alumni, Inc. Board & Committee for helping me get the scholarship going in JFK in memory of my late husband, Jimmy Director.</p>
+                    <p style="margin-bottom: 1rem;">I am looking forward to giving scholarships every year in honor of Jimmy, who was a wonderful husband and father to both of my sons.</p>
+                    <p style="margin-bottom: 1rem;">It will be an honor for me and my sons to present these scholarships to students in the high school that we all graduated from.</p>
+                    <p style="margin-bottom: 1rem;">~ Susan Director</p>
+                `,
+      },
+      {
+        title: 'The Frankie Basile Memorial Scholarship Fund',
+        description: `<p style="margin-bottom: 1rem;">The Frankie Basile Memorial Scholarship Fund supports JFK graduates.</p>`,
+      },
+    ]}
+  />
+</Layout>
