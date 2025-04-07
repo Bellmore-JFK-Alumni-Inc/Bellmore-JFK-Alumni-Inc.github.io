@@ -1,0 +1,21 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Events',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget -->
+  <HeroText tagline="Events" title="Get Involved!" />
+
+  <!-- Work in Progress -->
+  <Content
+    title="Work in Progress"
+    subtitle="Come back soon!"
+    content="We are currently working on this page. Please check back later for updates."
+  />
+</Layout>

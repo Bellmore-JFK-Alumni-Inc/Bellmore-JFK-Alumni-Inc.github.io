@@ -11,25 +11,16 @@ export const headerData = {
       href: getPermalink('/about'),
     },
     {
+      text: 'Join',
+      href: getPermalink('/registration'),
+    },
+    {
       text: 'Events',
-      href: getPermalink('#'),
+      href: getPermalink('/events'),
     },
     {
       text: 'Scholarships',
       href: getPermalink('/scholarships'),
-    },
-    {
-      text: 'Join Us',
-      links: [
-        {
-          text: 'Member Registration',
-          href: getPermalink('#'),
-        },
-        {
-          text: 'Reunion Registration',
-          href: getPermalink('#'),
-        },
-      ],
     },
     {
       text: 'Contact',
@@ -51,16 +42,13 @@ export const footerData = {
     {
       title: 'Events & Activities',
       links: [
-        { text: 'Events', href: '#' },
+        { text: 'Events', href: '/events' },
         { text: 'Scholarships', href: '/scholarships' },
       ],
     },
     {
       title: 'Get Involved',
-      links: [
-        { text: 'Member Registration', href: '#' },
-        { text: 'Reunion Registration', href: '#' },
-      ],
+      links: [{ text: 'Member Registration', href: '/registration' }],
     },
   ],
   secondaryLinks: [

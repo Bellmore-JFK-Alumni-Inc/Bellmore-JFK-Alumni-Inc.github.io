@@ -1,0 +1,31 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Member Registration',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget -->
+  <HeroText tagline="Join" title="Register Now!" />
+
+  <section class="py-8">
+    <div class="container mx-auto flex justify-center">
+      <div class="w-full max-w-3xl px-4">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeXFk8N_QPPvqTFWTGIMenRjFiEZ7ibScbJUHsXZ2BaeY9vUg/viewform?embedded=true"
+          width="100%"
+          height="800"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          class="shadow-lg rounded"
+        >
+          Loading registration form...
+        </iframe>
+      </div>
+    </div>
+  </section>
+</Layout>
