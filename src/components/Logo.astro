@@ -1,9 +1,13 @@
 ---
 import { SITE } from 'astrowind:config';
+import { Image } from 'astro:assets';
+// Update this path to match your actual favicon location
+import favicon from '../assets/favicons/favicon.ico';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex items-center"
 >
-  🚀 {SITE?.name}
+  <Image src={favicon} alt="Logo" width={24} height={24} class="mr-2 rtl:mr-0 rtl:ml-2" />
+  {SITE?.name}
 </span>
