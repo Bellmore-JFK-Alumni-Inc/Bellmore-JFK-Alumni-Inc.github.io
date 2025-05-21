@@ -28,6 +28,10 @@ export const headerData = {
       ],
     },
     {
+      text: 'Bricks',
+      href: getPermalink('/bricks'),
+    },
+    {
       text: 'Donate',
       href: getPermalink('/donate'),
     },
@@ -59,6 +63,7 @@ export const footerData = {
       title: 'Get Involved',
       links: [
         { text: 'Member Registration', href: '/registration' },
+        { text: 'Bricks', href: '/bricks' },
         { text: 'Donate', href: '/donate' },
       ],
     },
