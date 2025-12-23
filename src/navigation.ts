@@ -28,8 +28,8 @@ export const headerData = {
       ],
     },
     {
-      text: 'Bricks',
-      href: getPermalink('/bricks'),
+      text: 'STEM Career Fair',
+      href: getPermalink('/stem-career-fair'),
     },
     {
       text: 'Donate',
@@ -63,7 +63,7 @@ export const footerData = {
       title: 'Get Involved',
       links: [
         { text: 'Member Registration', href: '/registration' },
-        { text: 'Bricks', href: '/bricks' },
+        { text: 'STEM Career Fair', href: '/stem-career-fair' },
         { text: 'Donate', href: '/donate' },
       ],
     },

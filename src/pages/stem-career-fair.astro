@@ -1,0 +1,100 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+import careerFairPdf from '~/assets/documents/2026 STEM Career Fair.pdf';
+
+const metadata = {
+  title: '2026 STEM Career Fair',
+  description: 'Discover exhibitors, sessions, and tips for making the most of the 2026 STEM Career Fair.',
+};
+
+const quickFacts = [
+  { label: 'Date', value: 'April 21, 2026' },
+  { label: 'Time', value: '6:00 PM - 8:00 PM' },
+  { label: 'Location', value: 'John F. Kennedy High School, Bellmore, NY' },
+  { label: 'Audience', value: 'Students, families, alumni, and local employers' },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="STEM Career Fair"
+    title="2026 STEM Career Fair"
+    subtitle="Explore career paths in science, technology, engineering, and math with alumni and industry partners."
+    callToAction={{ text: 'Download the participant guide', href: careerFairPdf, target: '_blank', variant: 'primary' }}
+  />
+
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-8 lg:grid-cols-5">
+        <div class="lg:col-span-3">
+          <div class="rounded-2xl bg-white/90 dark:bg-slate-900 shadow-xl border border-slate-200/80 dark:border-slate-800 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-400 text-white">
+              <h2 class="text-lg font-semibold">Event Guide</h2>
+              <p class="text-sm text-white/90">Event details and registration information.</p>
+            </div>
+            <div class="w-full bg-slate-50 dark:bg-slate-950">
+              <iframe
+                src={careerFairPdf}
+                title="2026 STEM Career Fair Participant Guide"
+                class="w-full h-[900px] md:h-[1100px] border-0"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3 bg-slate-50/70 dark:bg-slate-950/60">
+              <a
+                class="btn-primary inline-flex items-center justify-center gap-2"
+                href={careerFairPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in new tab
+              </a>
+              <p class="text-sm text-slate-600 dark:text-slate-300">If the embed does not load, use the button to open the PDF directly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl bg-white/90 dark:bg-slate-900 shadow-lg border border-slate-200/80 dark:border-slate-800 h-full flex flex-col">
+            <div class="px-6 py-5 border-b border-slate-200 dark:border-slate-800">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100">What to expect</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Meet professionals, explore STEM pathways, and get ready for the next step.</p>
+            </div>
+            <div class="px-6 py-5 space-y-4">
+              <ul class="space-y-3 text-slate-700 dark:text-slate-200">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                  <span>Hands-on conversations with alumni working in engineering, healthcare, data, and tech.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-cyan-500"></span>
+                  <span>Learn about companies and industries that match your interests and skills.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+                  <span>Insights on internships, college programs, apprenticeships, and scholarships.</span>
+                </li>
+              </ul>
+
+              <div class="grid gap-3 sm:grid-cols-2">
+                {quickFacts.map((fact) => (
+                  <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-3">
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{fact.label}</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-100">{fact.value}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div class="p-4 rounded-xl bg-gradient-to-r from-blue-600/10 via-cyan-500/10 to-emerald-400/10 border border-blue-500/20">
+                <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">Tip</p>
+                <p class="text-sm text-slate-700 dark:text-slate-200 mt-1">Come prepared with questions and a positive attitude to make the most of your experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
