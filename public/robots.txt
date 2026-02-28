@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://bellmorejfkalumni.org/sitemap-index.xml

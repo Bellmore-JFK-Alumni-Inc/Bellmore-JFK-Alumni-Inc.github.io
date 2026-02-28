@@ -36,6 +36,33 @@ const { language, textDirection } = I18N;
     <SiteVerification />
     <Analytics />
 
+    <!-- JSON-LD Structured Data for Organization -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Bellmore JFK Alumni, Inc.',
+        url: 'https://bellmorejfkalumni.org',
+        description:
+          'Connecting graduates of John F. Kennedy High School in Bellmore, NY through events, scholarships, and community support.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '3000 Bellmore Ave',
+          addressLocality: 'Bellmore',
+          addressRegion: 'NY',
+          postalCode: '11710',
+          addressCountry: 'US',
+        },
+        email: 'BellmoreJFK1@gmail.com',
+        sameAs: [
+          'https://x.com/bellmorejfkalum',
+          'https://www.instagram.com/bellmorejfkalumni/',
+          'https://www.facebook.com/bellmore.jfk/',
+        ],
+      })}
+    />
+
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
   </head>

@@ -1,21 +1,89 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Events',
+  description:
+    'Stay up to date with Bellmore JFK Alumni events including reunions, career fairs, networking gatherings, and community activities in Bellmore, NY.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget -->
-  <HeroText tagline="Events" title="Get Involved!" />
+  <HeroText
+    tagline="Events"
+    title="Alumni Events & Activities"
+    subtitle="Stay connected with your JFK community through our upcoming events, reunions, and gatherings."
+  />
 
-  <!-- Work in Progress -->
-  <Content
-    title="Work in Progress"
-    subtitle="Come back soon!"
-    content="We are currently working on this page. Please check back later for updates."
+  <!-- Upcoming Events -->
+  <Features
+    title="Upcoming Events"
+    subtitle="Mark your calendar for these exciting opportunities to reconnect with fellow alumni."
+    columns={2}
+    items={[
+      {
+        title: '2026 STEM Career Fair',
+        description:
+          'April 21, 2026 from 6:00 PM - 8:00 PM at JFK High School. Explore career paths in science, technology, engineering, and math with alumni and industry partners. Open to students, families, alumni, and local employers.',
+        icon: 'tabler:atom',
+      },
+      {
+        title: 'Cougar Walk of Recognition',
+        description:
+          'Honor a loved one, celebrate a graduation, or leave your mark at JFK with a personalized brick on the Cougar Walk of Recognition. Orders are accepted on a rolling basis.',
+        icon: 'tabler:building-monument',
+      },
+    ]}
+  />
+
+  <!-- Recurring Events -->
+  <Features
+    title="Annual Activities"
+    subtitle="Our association organizes a variety of events throughout the year."
+    columns={3}
+    items={[
+      {
+        title: 'Class Reunions',
+        description:
+          'We help coordinate class reunions for JFK alumni. Contact us if you are planning a reunion for your graduating class.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Scholarship Awards',
+        description:
+          'Each year we award memorial scholarships to deserving JFK students through our four scholarship funds.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Community Outreach',
+        description:
+          'We support JFK High School programs and activities, maintaining strong ties between alumni and the current school community.',
+        icon: 'tabler:heart-handshake',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    title="Want to Get Involved?"
+    subtitle="Whether you'd like to attend an event, volunteer, or help organize, we'd love to hear from you."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'STEM Career Fair Details',
+        href: getPermalink('/stem-career-fair'),
+        icon: 'tabler:atom',
+      },
+      {
+        text: 'Contact Us',
+        href: getPermalink('/contact'),
+        icon: 'tabler:mail',
+      },
+    ]}
   />
 </Layout>

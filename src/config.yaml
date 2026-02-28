@@ -1,6 +1,6 @@
 site:
   name: Bellmore JFK Alumni, Inc.
-  site: 'https://Bellmore-JFK-Alumni-Inc.github.io'
+  site: 'https://bellmorejfkalumni.org'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Bellmore JFK Alumni, Inc.
     template: '%s — Bellmore JFK Alumni'
-  description: "\U0001F680 Member registration, reunion information, news/scholarships, alumni projects, and more!"
+  description: 'Bellmore JFK Alumni, Inc. connects graduates of John F. Kennedy High School in Bellmore, NY. Join us for events, reunions, scholarships, and community support.'
   robots:
     index: true
     follow: true

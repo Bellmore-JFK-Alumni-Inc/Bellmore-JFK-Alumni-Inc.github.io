@@ -1,7 +1,7 @@
 {
-  "name": "@onwidget/astrowind",
-  "version": "1.0.0-beta.51",
-  "description": "AstroWind: A free template using Astro 5.0 and Tailwind CSS. Astro starter theme.",
+  "name": "bellmore-jfk-alumni",
+  "version": "1.0.0",
+  "description": "Official website for Bellmore JFK Alumni, Inc. — Connecting graduates of John F. Kennedy High School in Bellmore, NY.",
   "type": "module",
   "private": true,
   "engines": {

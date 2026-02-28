@@ -2,12 +2,15 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Bellmore JFK Alumni, Inc.',
-  description: 'Connecting alumni and supporting the JFK community through events, news, and scholarships.',
+  title: 'Bellmore JFK Alumni, Inc. — Connecting JFK Graduates',
+  description:
+    'Official website of Bellmore JFK Alumni, Inc. Join our community of John F. Kennedy High School graduates for reunions, events, scholarships, and more in Bellmore, NY.',
   ignoreTitleTemplate: true,
 };
 
@@ -44,18 +47,51 @@ const features = [
       { text: 'Join Now', href: getPermalink('/registration'), variant: 'primary' },
       { text: 'Learn More', href: getPermalink('/about') },
     ]}
-    image={{ src: '~/assets/images/bellmore-jfk.png', alt: 'Bellmore JFK High School' }}
+    image={{ src: '~/assets/images/bellmore-jfk.png', alt: 'John F. Kennedy High School in Bellmore, New York' }}
   >
     <Fragment slot="title">
       Welcome to the <span class="text-accent dark:text-white highlight">Bellmore JFK Alumni Association</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Connecting alumni and supporting the JFK community through events, news, and scholarships.
+      Connecting graduates and supporting the John F. Kennedy High School community through events, scholarships, and
+      lasting friendships since 1966.
     </Fragment>
   </Hero>
 
+  <!-- Stats Section -->
+  <Stats
+    title="Our Community Impact"
+    subtitle="Building on decades of tradition and alumni support"
+    stats={[
+      { title: 'Founded', amount: '1966' },
+      { title: 'Scholarship Funds', amount: '4' },
+      { title: 'Board Members', amount: '13' },
+      { title: 'Years of Tradition', amount: '60+' },
+    ]}
+  />
+
   <!-- Features Section -->
-  <Features title="Get Involved" items={features} />
+  <Features
+    title="Get Involved"
+    subtitle="There are many ways to stay connected with the JFK community."
+    items={features}
+  />
+
+  <!-- About Preview -->
+  <Content
+    title="A Proud Legacy"
+    subtitle="Honoring our past, building our future"
+    content="John F. Kennedy High School opened its doors on September 7, 1966, and has since produced generations of accomplished graduates. The Bellmore JFK Alumni Association works to preserve this legacy, foster connections between alumni, and support current students through scholarships and community programs."
+    image={{
+      src: '~/assets/images/about-history.png',
+      alt: 'Historical image of JFK High School in Bellmore, NY',
+    }}
+    callToAction={{
+      text: 'Learn About Our History',
+      href: getPermalink('/about'),
+      icon: 'tabler:arrow-right',
+    }}
+  />
 
   <!-- Call to Action -->
   <CallToAction
@@ -65,12 +101,13 @@ const features = [
       {
         variant: 'primary',
         text: 'Become a Member',
-        href: '/registration',
+        href: getPermalink('/registration'),
         icon: 'tabler:user-plus',
       },
       {
-        text: 'Contact Us',
-        href: '/contact',
+        text: 'Make a Donation',
+        href: getPermalink('/donate'),
+        icon: 'tabler:heart',
       },
     ]}
   />

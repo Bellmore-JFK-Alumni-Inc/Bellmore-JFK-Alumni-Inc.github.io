@@ -25,6 +25,10 @@ export const headerData = {
           text: 'Scholarships',
           href: getPermalink('/scholarships'),
         },
+        {
+          text: 'Cougar Walk Bricks',
+          href: getPermalink('/bricks'),
+        },
       ],
     },
     {
@@ -55,16 +59,17 @@ export const footerData = {
     {
       title: 'Events & Activities',
       links: [
-        { text: 'Events', href: '/events' },
-        { text: 'Scholarships', href: '/scholarships' },
+        { text: 'Events', href: getPermalink('/events') },
+        { text: 'Scholarships', href: getPermalink('/scholarships') },
+        { text: 'Cougar Walk Bricks', href: getPermalink('/bricks') },
       ],
     },
     {
       title: 'Get Involved',
       links: [
-        { text: 'Member Registration', href: '/registration' },
-        { text: 'STEM Career Fair', href: '/stem-career-fair' },
-        { text: 'Donate', href: '/donate' },
+        { text: 'Member Registration', href: getPermalink('/registration') },
+        { text: 'STEM Career Fair', href: getPermalink('/stem-career-fair') },
+        { text: 'Donate', href: getPermalink('/donate') },
       ],
     },
   ],
@@ -78,7 +83,6 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/bellmore.jfk/' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Designed by <a class="text-blue-600 underline dark:text-muted" href="https://christopherprainito.com/"> Christopher Prainito '22</a> · All rights reserved.
+    &copy; ${new Date().getFullYear()} Bellmore JFK Alumni, Inc. All rights reserved. Designed by <a class="text-blue-600 underline dark:text-muted" href="https://christopherprainito.com/">Christopher Prainito '22</a>.
   `,
 };

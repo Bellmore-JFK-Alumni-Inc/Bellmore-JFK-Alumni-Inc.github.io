@@ -4,12 +4,18 @@ import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
   title: 'Donate',
+  description:
+    'Support the Bellmore JFK Alumni Association with a tax-deductible donation. Your contribution funds scholarships, school programs, and alumni events.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget -->
-  <HeroText tagline="Donate" title="We Appreciate Your Support!" />
+  <HeroText
+    tagline="Donate"
+    title="We Appreciate Your Support!"
+    subtitle="Your generous donations help fund scholarships for current students, support school programs, and keep our alumni community thriving."
+  />
 
   <section class="py-8">
     <div class="container mx-auto flex justify-center">
@@ -18,10 +24,10 @@ const metadata = {
         <script is:inline src="https://donorbox.org/widget.js" data-paypal-express="false"></script>
         <iframe
           src="https://donorbox.org/embed/bellmore-jfk-alumni-inc?"
+          title="Donate to Bellmore JFK Alumni, Inc."
           name="donorbox"
           data-allowpaymentrequest="allowpaymentrequest"
           seamless="seamless"
-          frameborder="0"
           scrolling="no"
           style="max-width: 500px; min-width: 250px; max-height:none!important; border: none; overflow: hidden; margin: 0 auto; display: block;"
           height="900px"

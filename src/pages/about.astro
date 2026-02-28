@@ -5,8 +5,12 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import { getPermalink } from '~/utils/permalinks';
+
 const metadata = {
   title: 'About JFK Alumni',
+  description:
+    'Learn about the Bellmore JFK Alumni Association, our mission to support graduates, the history of John F. Kennedy High School, and meet our Board of Directors.',
 };
 ---
 
@@ -58,7 +62,7 @@ const metadata = {
     content="Central High School District 3 began in 1934, led by Wellington C. Mepham, when residents of Merrick and Bellmore voted to create a central high school district. Mepham High School opened in 1937 to serve the growing community. Following WWII's population boom, Sanford H. Calhoun High School was built, with its first class graduating in 1960. As neighborhoods continued to expand south of Merrick Road, John F. Kennedy High School was established, opening its doors on September 7, 1966. The new three-story brick building was constructed on a 28-acre site adjacent to St. Mark's Avenue Elementary School, with Anthony W. Yeneralo as its first principal. JFK High School was designed with a 2000-student capacity and currently features 44 regular classrooms, specialized departments, athletic facilities, and modern educational spaces to serve the growing Bellmore community."
     image={{
       src: '~/assets/images/about-history.png',
-      alt: 'JFK Alumni History',
+      alt: 'Historical image of JFK High School in Bellmore, NY',
     }}
     callToAction={{
       variant: 'primary',
@@ -150,12 +154,12 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Become a Member',
-        href: '/registration',
+        href: getPermalink('/registration'),
         icon: 'tabler:user-plus',
       },
       {
         text: 'Contact Us',
-        href: '/contact',
+        href: getPermalink('/contact'),
       },
     ]}
   />

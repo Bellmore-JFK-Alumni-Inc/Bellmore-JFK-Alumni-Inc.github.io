@@ -1,26 +1,39 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Cougar Walk of Recognition Bricks',
+  description:
+    'Purchase a personalized brick on the Cougar Walk of Recognition at JFK High School in Bellmore, NY. Honor a loved one, celebrate a milestone, or leave your legacy.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget -->
-  <HeroText tagline="Bricks" title="Purchase a Brick Now!" />
+  <HeroText
+    tagline="Cougar Walk"
+    title="Cougar Walk of Recognition"
+    subtitle="Leave a lasting tribute at JFK High School with a personalized brick on the Cougar Walk of Recognition."
+  />
+
+  <!-- Description Section -->
+  <Content
+    title="About the Cougar Walk"
+    content="The Cougar Walk of Recognition is a meaningful way to honor the legacy of JFK High School. Purchase a personalized engraved brick to commemorate a graduation, celebrate a loved one, remember a classmate, or simply show your Cougar pride. Each brick becomes a permanent part of the walkway at JFK High School, creating a lasting connection between alumni past and present. To order your brick, fill out the form below and complete your payment."
+  />
 
   <section class="py-8">
     <div class="container mx-auto flex justify-center">
       <div class="w-full max-w-3xl px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Brick Order Form</h2>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSenMe-FcHuqIhT1dXR2d9nf2q5tRlSqbxMtqdAzU0NDYOucXg/viewform?embedded=true"
+          title="Cougar Walk of Recognition Brick Order Form"
           width="100%"
           height="800"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
+          style="border: none;"
           class="shadow-lg rounded"
         >
           Loading brick order form...
@@ -32,14 +45,18 @@ const metadata = {
   <section class="py-8">
     <div class="container mx-auto flex justify-center">
       <div class="w-full max-w-3xl px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Brick Payment</h2>
+        <p class="text-center text-muted mb-6">
+          After completing the order form above, please submit your payment below.
+        </p>
         <!-- DonorBox embed -->
         <script is:inline src="https://donorbox.org/widget.js" data-paypal-express="false"></script>
         <iframe
           src="https://donorbox.org/embed/cougar-walk-of-recognition-bricks?"
+          title="Cougar Walk of Recognition Brick Payment"
           name="donorbox"
           data-allowpaymentrequest="allowpaymentrequest"
           seamless="seamless"
-          frameborder="0"
           scrolling="no"
           style="max-width: 500px; min-width: 250px; max-height:none!important; border: none; overflow: hidden; margin: 0 auto; display: block;"
           height="900px"
