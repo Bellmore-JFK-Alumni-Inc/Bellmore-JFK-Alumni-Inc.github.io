@@ -29,11 +29,11 @@ export const headerData = {
           text: 'Cougar Walk Bricks',
           href: getPermalink('/bricks'),
         },
+        {
+          text: 'Hall of Fame',
+          href: getPermalink('/hall-of-fame'),
+        },
       ],
-    },
-    {
-      text: 'STEM Career Fair',
-      href: getPermalink('/stem-career-fair'),
     },
     {
       text: 'Donate',
@@ -62,13 +62,14 @@ export const footerData = {
         { text: 'Events', href: getPermalink('/events') },
         { text: 'Scholarships', href: getPermalink('/scholarships') },
         { text: 'Cougar Walk Bricks', href: getPermalink('/bricks') },
+        { text: 'Hall of Fame', href: getPermalink('/hall-of-fame') },
       ],
     },
     {
       title: 'Get Involved',
       links: [
         { text: 'Member Registration', href: getPermalink('/registration') },
-        { text: 'STEM Career Fair', href: getPermalink('/stem-career-fair') },
+        { text: 'Hall of Fame Nominations', href: getPermalink('/hall-of-fame') },
         { text: 'Donate', href: getPermalink('/donate') },
       ],
     },

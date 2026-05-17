@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Hall of Fame',
+  description:
+    'Nominate an outstanding Bellmore JFK High School graduate for the Hall of Fame. Recognize alumni who have made extraordinary contributions to their fields, communities, or to JFK itself.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Hall of Fame"
+    title="Nominate an Outstanding Alumni"
+    subtitle="Recognize a JFK graduate who has made an extraordinary impact — in their career, their community, or in the halls of Bellmore JFK itself."
+  />
+
+  <Content
+    title="About the Hall of Fame"
+    content="The Bellmore JFK Alumni Hall of Fame honors graduates who have distinguished themselves through remarkable achievement, service, or dedication. Whether they've made breakthroughs in science, served their community, built businesses, shaped education, or carried the Cougar spirit forward in an extraordinary way — we want to hear about them. Nominations are open to all JFK High School graduates. Submit your nomination using the form below and help us celebrate the best of our alumni community."
+  />
+
+  <section class="py-8">
+    <div class="container mx-auto flex justify-center">
+      <div class="w-full max-w-3xl px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Hall of Fame Nomination Form</h2>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSf_cM6r0m7jSNA2SWxsyFx7M_uGvC8nNxKnBbGHfbSwbUPWHA/viewform?embedded=true"
+          title="Hall of Fame Nomination Form"
+          width="100%"
+          height="900"
+          style="border: none;"
+          class="shadow-lg rounded"
+        >
+          Loading nomination form...
+        </iframe>
+        <p class="text-center text-sm text-muted mt-4">
+          If the form does not load, <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf_cM6r0m7jSNA2SWxsyFx7M_uGvC8nNxKnBbGHfbSwbUPWHA/viewform?"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 underline dark:text-blue-400">open the nomination form directly</a
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Questions About the Hall of Fame?"
+    subtitle="Learn more about our association or reach out with any questions about the nomination process."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'About Our Association',
+        href: getPermalink('/about'),
+        icon: 'tabler:info-circle',
+      },
+      {
+        text: 'Contact Us',
+        href: getPermalink('/contact'),
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

@@ -27,10 +27,10 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: '2026 STEM Career Fair',
+        title: 'Hall of Fame Nominations',
         description:
-          'April 21, 2026 from 6:00 PM - 8:00 PM at JFK High School. Explore career paths in science, technology, engineering, and math with alumni and industry partners. Open to students, families, alumni, and local employers.',
-        icon: 'tabler:atom',
+          'Nominate an outstanding JFK graduate for the Hall of Fame. Nominations are open year-round — honor a graduate who has made an extraordinary impact in their career, community, or at JFK itself.',
+        icon: 'tabler:trophy',
       },
       {
         title: 'Cougar Walk of Recognition',
@@ -68,16 +68,31 @@ const metadata = {
     ]}
   />
 
+  <!-- Past Events -->
+  <Features
+    title="Past Events"
+    subtitle="A look back at recent alumni events."
+    columns={2}
+    items={[
+      {
+        title: '2026 STEM Career Fair',
+        description:
+          'Held on April 21, 2026 from 6:00 PM – 8:00 PM at JFK High School. Students, families, alumni, and local employers came together to explore career paths in science, technology, engineering, and math.',
+        icon: 'tabler:atom',
+      },
+    ]}
+  />
+
   <!-- Call to Action -->
   <CallToAction
     title="Want to Get Involved?"
-    subtitle="Whether you'd like to attend an event, volunteer, or help organize, we'd love to hear from you."
+    subtitle="Whether you'd like to nominate an alumni, volunteer, or help organize, we'd love to hear from you."
     actions={[
       {
         variant: 'primary',
-        text: 'STEM Career Fair Details',
-        href: getPermalink('/stem-career-fair'),
-        icon: 'tabler:atom',
+        text: 'Nominate for Hall of Fame',
+        href: getPermalink('/hall-of-fame'),
+        icon: 'tabler:trophy',
       },
       {
         text: 'Contact Us',

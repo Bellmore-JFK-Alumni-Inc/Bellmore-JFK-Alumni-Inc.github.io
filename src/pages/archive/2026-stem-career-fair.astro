@@ -5,8 +5,9 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import careerFairPdf from '~/assets/documents/2026 STEM Career Fair.pdf';
 
 const metadata = {
-  title: '2026 STEM Career Fair',
-  description: 'Discover exhibitors, sessions, and tips for making the most of the 2026 STEM Career Fair.',
+  title: '2026 STEM Career Fair (Archive)',
+  description: 'Archived page for the 2026 STEM Career Fair held on April 21, 2026 at JFK High School in Bellmore, NY.',
+  robots: { index: false, follow: false },
 };
 
 const quickFacts = [
@@ -19,10 +20,9 @@ const quickFacts = [
 
 <Layout metadata={metadata}>
   <HeroText
-    tagline="STEM Career Fair"
+    tagline="Archive"
     title="2026 STEM Career Fair"
-    subtitle="Explore career paths in science, technology, engineering, and math with alumni and industry partners."
-    callToAction={{ text: 'Download the participant guide', href: careerFairPdf, target: '_blank', variant: 'primary' }}
+    subtitle="This event has concluded. The participant guide and event details are preserved below for reference."
   />
 
   <section class="py-12">
@@ -68,27 +68,12 @@ const quickFacts = [
             class="rounded-2xl bg-white/90 dark:bg-slate-900 shadow-lg border border-slate-200/80 dark:border-slate-800 h-full flex flex-col"
           >
             <div class="px-6 py-5 border-b border-slate-200 dark:border-slate-800">
-              <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100">What to expect</h3>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100">Event Details</h3>
               <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
-                Meet professionals, explore STEM pathways, and get ready for the next step.
+                The 2026 STEM Career Fair connected students with professionals across engineering, healthcare, data, and tech.
               </p>
             </div>
             <div class="px-6 py-5 space-y-4">
-              <ul class="space-y-3 text-slate-700 dark:text-slate-200">
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
-                  <span>Hands-on conversations with alumni working in engineering, healthcare, data, and tech.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-cyan-500"></span>
-                  <span>Learn about companies and industries that match your interests and skills.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
-                  <span>Insights on internships, college programs, apprenticeships, and scholarships.</span>
-                </li>
-              </ul>
-
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   quickFacts.map((fact) => (
@@ -98,15 +83,6 @@ const quickFacts = [
                     </div>
                   ))
                 }
-              </div>
-
-              <div
-                class="p-4 rounded-xl bg-gradient-to-r from-blue-600/10 via-cyan-500/10 to-emerald-400/10 border border-blue-500/20"
-              >
-                <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">Tip</p>
-                <p class="text-sm text-slate-700 dark:text-slate-200 mt-1">
-                  Come prepared with questions and a positive attitude to make the most of your experience.
-                </p>
               </div>
             </div>
           </div>
