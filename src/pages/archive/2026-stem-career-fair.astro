@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import EmbedPanel from '~/components/common/EmbedPanel.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 
 import careerFairPdf from '~/assets/documents/2026 STEM Career Fair.pdf';
@@ -25,68 +26,42 @@ const quickFacts = [
     subtitle="This event has concluded. The participant guide and event details are preserved below for reference."
   />
 
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid gap-8 lg:grid-cols-5">
-        <div class="lg:col-span-3">
-          <div
-            class="rounded-2xl bg-white/90 dark:bg-slate-900 shadow-xl border border-slate-200/80 dark:border-slate-800 overflow-hidden"
-          >
-            <div
-              class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-400 text-white"
-            >
-              <h2 class="text-lg font-semibold">Event Guide</h2>
-              <p class="text-sm text-white/90">Event details and registration information.</p>
-            </div>
-            <div class="w-full bg-slate-50 dark:bg-slate-950">
-              <iframe
-                src={careerFairPdf}
-                title="2026 STEM Career Fair Participant Guide"
-                class="w-full h-[900px] md:h-[1100px] border-0"
-                loading="lazy"></iframe>
-            </div>
-            <div
-              class="px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3 bg-slate-50/70 dark:bg-slate-950/60"
-            >
-              <a
-                class="btn-primary inline-flex items-center justify-center gap-2"
-                href={careerFairPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open in new tab
-              </a>
-              <p class="text-sm text-slate-600 dark:text-slate-300">
-                If the embed does not load, use the button to open the PDF directly.
-              </p>
-            </div>
-          </div>
-        </div>
+  <EmbedPanel title="Event Guide" description="Event details and registration information." maxWidth="max-w-6xl">
+    <iframe
+      src={careerFairPdf}
+      title="2026 STEM Career Fair Participant Guide"
+      class="h-[900px] w-full border-0 md:h-[1100px]"
+      loading="lazy"
+    >
+    </iframe>
+    <p slot="fallback">
+      If the embed does not load, <a
+        href={careerFairPdf}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-blue-600 underline dark:text-blue-400">open the PDF directly</a
+      >.
+    </p>
+  </EmbedPanel>
 
-        <div class="lg:col-span-2">
-          <div
-            class="rounded-2xl bg-white/90 dark:bg-slate-900 shadow-lg border border-slate-200/80 dark:border-slate-800 h-full flex flex-col"
-          >
-            <div class="px-6 py-5 border-b border-slate-200 dark:border-slate-800">
-              <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100">Event Details</h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
-                The 2026 STEM Career Fair connected students with professionals across engineering, healthcare, data, and tech.
-              </p>
+  <section class="pb-12 pt-2">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="mb-6 text-center sm:text-left">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Event Details</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+          The 2026 STEM Career Fair connected students with professionals across engineering, healthcare, data, and
+          tech.
+        </p>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          quickFacts.map((fact) => (
+            <div class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 dark:border-slate-800 dark:bg-slate-950">
+              <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{fact.label}</p>
+              <p class="mt-1 text-base font-semibold text-slate-900 dark:text-slate-100">{fact.value}</p>
             </div>
-            <div class="px-6 py-5 space-y-4">
-              <div class="grid gap-3 sm:grid-cols-2">
-                {
-                  quickFacts.map((fact) => (
-                    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-3">
-                      <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{fact.label}</p>
-                      <p class="text-base font-semibold text-slate-900 dark:text-slate-100">{fact.value}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </div>
     </div>
   </section>

@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import EmbedPanel from '~/components/common/EmbedPanel.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const contactEmail = 'bellmorejfkalumni@gmail.com';
+
+const metadata = {
+  title: 'In Memoriam',
+  description:
+    'Honor and remember Bellmore JFK alumni who have passed away, organized by graduating class in the John F. Kennedy High School memorial slideshow.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="In Memoriam"
+    title="Remembering Our Alumni"
+    subtitle="Honoring John F. Kennedy High School classmates and graduates who are remembered by the Bellmore JFK alumni community."
+  />
+
+  <EmbedPanel
+    title="John F. Kennedy In Memoriam Slideshow"
+    description="Browse the memorial slideshow by graduating class here on the site."
+    maxWidth="max-w-6xl"
+  >
+    <iframe
+      src="https://www.canva.com/design/DAHMG2tlAk4/uNsX4-so-hkEqmvHgVhuJA/view?embed"
+      title="John F. Kennedy In Memoriam Slideshow"
+      class="aspect-video w-full border-0"
+      allowfullscreen
+      loading="lazy"
+    >
+    </iframe>
+    <p slot="fallback">
+      If the slideshow does not load, <a
+        href="https://canva.link/c6eczbibxg1uynk"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-blue-600 underline dark:text-blue-400">open the slideshow directly</a
+      >.
+    </p>
+  </EmbedPanel>
+
+  <section class="pb-12 pt-2">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+      <div class="rounded-lg border border-slate-200 bg-slate-50 px-5 py-5 dark:border-slate-800 dark:bg-slate-950">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Request an Addition</h2>
+        <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+          To add someone to the In Memoriam slideshow, please email <a
+            href={`mailto:${contactEmail}?subject=In%20Memoriam%20Addition`}
+            class="font-medium text-blue-600 underline dark:text-blue-400">{contactEmail}</a
+          > with the alumnus or alumna's name and class year.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import EmbedPanel from '~/components/common/EmbedPanel.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
@@ -17,25 +18,24 @@ const metadata = {
     subtitle="Your generous donations help fund scholarships for current students, support school programs, and keep our alumni community thriving."
   />
 
-  <section class="py-8">
-    <div class="container mx-auto flex justify-center">
-      <div class="w-full max-w-3xl px-4">
-        <!-- DonorBox embed -->
-        <script is:inline src="https://donorbox.org/widget.js" data-paypal-express="false"></script>
-        <iframe
-          src="https://donorbox.org/embed/bellmore-jfk-alumni-inc?"
-          title="Donate to Bellmore JFK Alumni, Inc."
-          name="donorbox"
-          data-allowpaymentrequest="allowpaymentrequest"
-          seamless="seamless"
-          scrolling="no"
-          style="max-width: 500px; min-width: 250px; max-height:none!important; border: none; overflow: hidden; margin: 0 auto; display: block;"
-          height="900px"
-          width="100%"
-          allow="payment"
-        >
-        </iframe>
-      </div>
-    </div>
-  </section>
+  <EmbedPanel
+    title="Donation Form"
+    description="Make a secure donation here on the site."
+    maxWidth="max-w-3xl"
+    bodyClass="px-4 py-6"
+  >
+    <script is:inline src="https://donorbox.org/widget.js" data-paypal-express="false"></script>
+    <iframe
+      src="https://donorbox.org/embed/bellmore-jfk-alumni-inc?"
+      title="Donate to Bellmore JFK Alumni, Inc."
+      name="donorbox"
+      data-allowpaymentrequest="allowpaymentrequest"
+      seamless="seamless"
+      style="max-width: 500px; min-width: 250px; max-height:none!important; border: none; overflow: hidden; margin: 0 auto; display: block;"
+      height="900px"
+      width="100%"
+      allow="payment"
+    >
+    </iframe>
+  </EmbedPanel>
 </Layout>

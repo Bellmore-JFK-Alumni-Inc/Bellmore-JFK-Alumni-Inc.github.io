@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import EmbedPanel from '~/components/common/EmbedPanel.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Content from '~/components/widgets/Content.astro';
 
@@ -24,47 +25,47 @@ const metadata = {
     content="The Cougar Walk of Recognition is a meaningful way to honor the legacy of JFK High School. Purchase a personalized engraved brick to commemorate a graduation, celebrate a loved one, remember a classmate, or simply show your Cougar pride. Each brick becomes a permanent part of the walkway at JFK High School, creating a lasting connection between alumni past and present. To order your brick, fill out the form below and complete your payment."
   />
 
-  <section class="py-8">
-    <div class="container mx-auto flex justify-center">
-      <div class="w-full max-w-3xl px-4">
-        <h2 class="text-2xl font-bold text-center mb-6">Brick Order Form</h2>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSenMe-FcHuqIhT1dXR2d9nf2q5tRlSqbxMtqdAzU0NDYOucXg/viewform?embedded=true"
-          title="Cougar Walk of Recognition Brick Order Form"
-          width="100%"
-          height="800"
-          style="border: none;"
-          class="shadow-lg rounded"
-        >
-          Loading brick order form...
-        </iframe>
-      </div>
-    </div>
-  </section>
+  <EmbedPanel
+    title="Brick Order Form"
+    description="Complete the brick order form here on the site."
+    maxWidth="max-w-3xl"
+  >
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSenMe-FcHuqIhT1dXR2d9nf2q5tRlSqbxMtqdAzU0NDYOucXg/viewform?embedded=true"
+      title="Cougar Walk of Recognition Brick Order Form"
+      class="h-[800px] w-full border-0"
+      loading="lazy"
+    >
+      Loading brick order form...
+    </iframe>
+    <p slot="fallback">
+      If the form does not load, <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSenMe-FcHuqIhT1dXR2d9nf2q5tRlSqbxMtqdAzU0NDYOucXg/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-blue-600 underline dark:text-blue-400">open the brick order form directly</a
+      >.
+    </p>
+  </EmbedPanel>
 
-  <section class="py-8">
-    <div class="container mx-auto flex justify-center">
-      <div class="w-full max-w-3xl px-4">
-        <h2 class="text-2xl font-bold text-center mb-6">Brick Payment</h2>
-        <p class="text-center text-muted mb-6">
-          After completing the order form above, please submit your payment below.
-        </p>
-        <!-- DonorBox embed -->
-        <script is:inline src="https://donorbox.org/widget.js" data-paypal-express="false"></script>
-        <iframe
-          src="https://donorbox.org/embed/cougar-walk-of-recognition-bricks?"
-          title="Cougar Walk of Recognition Brick Payment"
-          name="donorbox"
-          data-allowpaymentrequest="allowpaymentrequest"
-          seamless="seamless"
-          scrolling="no"
-          style="max-width: 500px; min-width: 250px; max-height:none!important; border: none; overflow: hidden; margin: 0 auto; display: block;"
-          height="900px"
-          width="100%"
-          allow="payment"
-        >
-        </iframe>
-      </div>
-    </div>
-  </section>
+  <EmbedPanel
+    title="Brick Payment"
+    description="After completing the order form above, submit your payment below."
+    maxWidth="max-w-3xl"
+    bodyClass="px-4 py-6"
+  >
+    <script is:inline src="https://donorbox.org/widget.js" data-paypal-express="false"></script>
+    <iframe
+      src="https://donorbox.org/embed/cougar-walk-of-recognition-bricks?"
+      title="Cougar Walk of Recognition Brick Payment"
+      name="donorbox"
+      data-allowpaymentrequest="allowpaymentrequest"
+      seamless="seamless"
+      style="max-width: 500px; min-width: 250px; max-height:none!important; border: none; overflow: hidden; margin: 0 auto; display: block;"
+      height="900px"
+      width="100%"
+      allow="payment"
+    >
+    </iframe>
+  </EmbedPanel>
 </Layout>

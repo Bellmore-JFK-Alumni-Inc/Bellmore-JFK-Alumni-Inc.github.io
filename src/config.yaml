@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: Bellmore JFK Alumni, Inc.
-    template: '%s — Bellmore JFK Alumni'
+    template: '%s - Bellmore JFK Alumni'
   description: 'Bellmore JFK Alumni, Inc. connects graduates of John F. Kennedy High School in Bellmore, NY. Join us for events, reunions, scholarships, and community support.'
   robots:
     index: true
@@ -56,7 +56,7 @@ apps:
 
     tag:
       isEnabled: false
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'tag' # Tag main path /tag/some-tag
       robots:
         index: false
 

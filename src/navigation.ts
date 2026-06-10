@@ -33,6 +33,10 @@ export const headerData = {
           text: 'Hall of Fame',
           href: getPermalink('/hall-of-fame'),
         },
+        {
+          text: 'In Memoriam',
+          href: getPermalink('/in-memoriam'),
+        },
       ],
     },
     {
@@ -63,6 +67,7 @@ export const footerData = {
         { text: 'Scholarships', href: getPermalink('/scholarships') },
         { text: 'Cougar Walk Bricks', href: getPermalink('/bricks') },
         { text: 'Hall of Fame', href: getPermalink('/hall-of-fame') },
+        { text: 'In Memoriam', href: getPermalink('/in-memoriam') },
       ],
     },
     {
@@ -70,6 +75,7 @@ export const footerData = {
       links: [
         { text: 'Member Registration', href: getPermalink('/registration') },
         { text: 'Hall of Fame Nominations', href: getPermalink('/hall-of-fame') },
+        { text: 'Memorial Additions', href: getPermalink('/in-memoriam') },
         { text: 'Donate', href: getPermalink('/donate') },
       ],
     },
