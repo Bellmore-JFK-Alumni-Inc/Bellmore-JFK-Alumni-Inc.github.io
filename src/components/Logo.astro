@@ -6,8 +6,8 @@ import favicon from '../assets/favicons/favicon.ico';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex items-center"
+  class="ml-2 flex max-w-[14rem] items-center self-center text-lg font-bold leading-tight text-gray-900 dark:text-white sm:max-w-none sm:text-xl md:text-xl rtl:ml-0 rtl:mr-2"
 >
-  <Image src={favicon} alt="Logo" width={24} height={24} class="mr-2 rtl:mr-0 rtl:ml-2" />
+  <Image src={favicon} alt="Logo" width={24} height={24} class="mr-2 shrink-0 rtl:ml-2 rtl:mr-0" />
   {SITE?.name}
 </span>

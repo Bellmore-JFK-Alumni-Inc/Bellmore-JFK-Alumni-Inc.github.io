@@ -8,10 +8,23 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: getPermalink('/about'),
+      links: [
+        {
+          text: 'Overview',
+          href: getPermalink('/about'),
+        },
+        {
+          text: 'Board of Directors',
+          href: getPermalink('/about#board'),
+        },
+        {
+          text: 'Past Board Members',
+          href: getPermalink('/about#past-board'),
+        },
+      ],
     },
     {
-      text: 'Join',
+      text: 'Membership',
       href: getPermalink('/registration'),
     },
     {
@@ -57,6 +70,7 @@ export const footerData = {
       links: [
         { text: 'Home', href: getHomePermalink() },
         { text: 'About', href: getPermalink('/about') },
+        { text: 'Board of Directors', href: getPermalink('/about#board') },
         { text: 'Contact', href: getPermalink('/contact') },
       ],
     },
